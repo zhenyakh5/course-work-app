@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Input;
+using BookingService.MVVM.Services;
+using System.Collections.Generic;
+
+namespace BookingService.MVVM.ViewModels
+{
+    public class MainViewModel : ViewModelBase
+    {
+        private readonly AppDbContext _context;
+        private List<HotelRoom> _originalRooms = new List<HotelRoom>();
+
+        public ObservableCollection<HotelRoom> Rooms { get; } = new ObservableCollection<HotelRoom>();
+        public string SearchText { get; set; }
+
+        public System.Windows.Input.ICommand AlphabetSortCommand { get; }
+        public System.Windows.Input.ICommand CostAscSortCommand { get; }
+        public System.Windows.Input.ICommand CostDescSortCommand { get; }
+        public System.Windows.Input.ICommand RefreshCommand { get; }
+
+        public MainViewModel(AppDbContext context)
+        {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+
+            AlphabetSortCommand = new RelayCommand(_ => SortAlphabet());
+            CostAscSortCommand = new RelayCommand(_ => SortByCostAsc());
+            CostDescSortCommand = new RelayCommand(_ => SortByCostDesc());
+            RefreshCommand = new RelayCommand(_ => LoadRooms());
+
+            LoadRooms();
+        }
+
+        public void LoadRooms()
+        {
+            try
+            {
+                _originalRooms = _context.HotelRooms.AsNoTracking().ToList();
+                ApplyFilter();
+            }
+            catch
+            {
+                // ignore for now; UI can show message if needed
+            }
+        }
+
+        public void ApplyFilter()
+        {
+            var filter = (SearchText ?? string.Empty).ToLower();
+            var filtered = string.IsNullOrWhiteSpace(filter)
+                ? _originalRooms
+                : _originalRooms.Where(r => r.Name != null && r.Name.ToLower().Contains(filter));
+
+            Rooms.Clear();
+            foreach (var r in filtered)
+                Rooms.Add(r);
+        }
+
+        private void SortAlphabet()
+        {
+            Rooms.Clear();
+            foreach (var r in _originalRooms.OrderBy(r => r.Name))
+                Rooms.Add(r);
+        }
+
+        private void SortByCostAsc()
+        {
+            Rooms.Clear();
+            foreach (var r in _originalRooms.OrderBy(r => r.Price))
+                Rooms.Add(r);
+        }
+
+        private void SortByCostDesc()
+        {
+            Rooms.Clear();
+            foreach (var r in _originalRooms.OrderByDescending(r => r.Price))
+                Rooms.Add(r);
+        }
+    }
+}

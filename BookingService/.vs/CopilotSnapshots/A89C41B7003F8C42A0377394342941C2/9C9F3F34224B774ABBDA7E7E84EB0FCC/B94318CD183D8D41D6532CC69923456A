@@ -1,0 +1,30 @@
+﻿using BookingService.MVVM.Services;
+using System.Windows;
+
+namespace BookingService
+{
+    /// <summary>
+    /// Логика взаимодействия для App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            LanguageManager.ChangeLanguage("ru-RU");
+            ThemeManager.ChangeTheme("Light");
+
+            // Initialize shared services
+            ServiceLocator.Initialize();
+            // Open login window
+            var login = new MVVM.Views.LoginWindow();
+            login.Show();
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
+            ServiceLocator.Dispose();
+        }
+    }
+}

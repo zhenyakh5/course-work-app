@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Основные цвета -->
+    <Color x:Key="PrimaryColor">#FFB3844D</Color>
+    <Color x:Key="SecondaryColor">#FFF7CA94</Color>
+    <Color x:Key="AccentColor">#FFDCA543</Color>
+    <Color x:Key="LightAccentColor">#FFC79F70</Color>
+    <Color x:Key="ErrorColor">#FFD9534F</Color>
+    <Color x:Key="TextColor">#FF333333</Color>
+    <!-- Темный текст -->
+    <Color x:Key="BackgroundColor">White</Color>
+    <!-- Светлый фон -->
+
+    <!-- Кисти -->
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{DynamicResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{DynamicResource SecondaryColor}"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="{DynamicResource AccentColor}"/>
+    <SolidColorBrush x:Key="LightAccentBrush" Color="{DynamicResource LightAccentColor}"/>
+    <SolidColorBrush x:Key="ErrorBrush" Color="{DynamicResource ErrorColor}"/>
+    <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}"/>
+    <SolidColorBrush x:Key="WhiteBrush" Color="{DynamicResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource BackgroundColor}"/>
+</ResourceDictionary>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HotelModelFirst.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="HotelModelFirstStoreContainer">
+    <EntitySet Name="Users" EntityType="HotelModelFirst.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HotelRooms" EntityType="HotelModelFirst.Store.HotelRooms" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HotelRooms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ShortDescription" Type="nvarchar" Nullable="true" MaxLength="200" />
+    <Property Name="FullDescription" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="ImagePath" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Category" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Rating" Type="float" Nullable="true" />
+    <Property Name="Price" Type="float" Nullable="true" />
+    <Property Name="NumberOfBeds" Type="int" Nullable="true" />
+    <Property Name="IsAvailable" Type="bit" Nullable="false" />
+    <Property Name="Amenities" Type="nvarchar" Nullable="true" MaxLength="4000" />
+    <Property Name="Stars" Type="int" Nullable="true" />
+    <Property Name="HasBalcony" Type="bit" Nullable="false" />
+    <Property Name="IsNonSmoking" Type="bit" Nullable="false" />
+  </EntityType>
+</Schema>

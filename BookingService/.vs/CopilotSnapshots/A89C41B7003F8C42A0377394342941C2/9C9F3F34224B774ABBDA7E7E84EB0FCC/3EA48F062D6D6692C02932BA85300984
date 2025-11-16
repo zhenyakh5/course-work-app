@@ -1,0 +1,64 @@
+﻿using System.Windows;
+using BookingService.MVVM.Services;
+using BookingService.MVVM.ViewModels;
+using System.Linq;
+
+namespace BookingService
+{
+    public partial class MainWindow : Window
+    {
+        private MainViewModel _vm;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            _vm = new MainViewModel(ServiceLocator.DbContext);
+            DataContext = _vm;
+            ShowAdminPanel();
+        }
+
+        public void ShowAdminPanel()
+        {
+            AdminPanelButton.Visibility = (SessionManager.CurrentUser?.IsAdmin == true)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+
+        private void AdminPanelButton_Click(object sender, RoutedEventArgs e)
+        {
+            var admin = new AdminPanel();
+            admin.Show();
+        }
+
+        private void AlphabetSort_Click(object sender, RoutedEventArgs e)
+        {
+            _vm?.AlphabetSortCommand?.Execute(null);
+        }
+
+        private void CostAscSort_Click(object sender, RoutedEventArgs e)
+        {
+            _vm?.CostAscSortCommand?.Execute(null);
+        }
+
+        private void CostDescSort_Click(object sender, RoutedEventArgs e)
+        {
+            _vm?.CostDescSortCommand?.Execute(null);
+        }
+
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+        {
+            _vm?.RefreshCommand?.Execute(null);
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            new ProfileWindow().Show();
+        }
+
+        private void SearchBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            _vm.SearchText = SearchBox.Text;
+            _vm.ApplyFilter();
+        }
+    }
+}

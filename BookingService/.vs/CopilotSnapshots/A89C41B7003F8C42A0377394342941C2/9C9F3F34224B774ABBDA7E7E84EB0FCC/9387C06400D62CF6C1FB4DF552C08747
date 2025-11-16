@@ -1,0 +1,23 @@
+﻿using System.Windows;
+using BookingService.MVVM.Services;
+using BookingService.MVVM.ViewModels;
+
+namespace BookingService
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = new MainViewModel(ServiceLocator.DbContext);
+            ShowAdminPanel();
+        }
+
+        public void ShowAdminPanel()
+        {
+            AdminPanelButton.Visibility = (SessionManager.CurrentUser?.IsAdmin == true)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+    }
+}

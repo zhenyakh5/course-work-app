@@ -1,0 +1,41 @@
+﻿using System.Windows;
+using BookingService.MVVM.Services;
+
+namespace BookingService
+{
+    public partial class AdminPanel : Window
+    {
+        public AdminPanel()
+        {
+            InitializeComponent();
+        }
+
+        private void AddRoomButton_Click(object sender, RoutedEventArgs e)
+        {
+            var addRoomWindow = new AddRoom(ServiceLocator.DbContext);
+            addRoomWindow.Show();
+        }
+
+        private void EditRoomButton_Click(object sender, RoutedEventArgs e)
+        {
+            var editRoomWindow = new EditRoom(ServiceLocator.DbContext);
+            editRoomWindow.Show();
+        }
+
+        private void DeleteRoomButton_Click(object sender, RoutedEventArgs e)
+        {
+            var deleteRoomWindow = new DeleteRoom(ServiceLocator.DbContext);
+            deleteRoomWindow.Show();
+        }
+
+        private void UndoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceLocator.DbContext.Undo();
+        }
+
+        private void RedoButton_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceLocator.DbContext.Redo();
+        }
+    }
+}

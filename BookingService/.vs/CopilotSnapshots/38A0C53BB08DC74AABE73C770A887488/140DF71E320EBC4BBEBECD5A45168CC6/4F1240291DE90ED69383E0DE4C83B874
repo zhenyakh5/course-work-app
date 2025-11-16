@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="AppTitle">BookingService</system:String>
+    <system:String x:Key="ChangeLanguageButton">Сменить язык</system:String>
+    <system:String x:Key="CancelButton">Отмена</system:String>
+    <system:String x:Key="SearchLabel">Поиск</system:String>
+    <system:String x:Key="SortLabel">Сортировка</system:String>
+
+    <system:String x:Key="LoginWindowTitle">BookingService - Авторизация</system:String>
+    <system:String x:Key="LoginHeader">Авторизация</system:String>
+    <system:String x:Key="UsernameLabel">Логин:</system:String>
+    <system:String x:Key="PasswordLabel">Пароль:</system:String>
+    <system:String x:Key="LoginButton">Войти</system:String>
+    <system:String x:Key="RegisterButton">Регистрация</system:String>
+
+    <system:String x:Key="RegisterWindowTitle">BookingService - Регистрация</system:String>
+    <system:String x:Key="RegisterHeader">Регистрация</system:String>
+    <system:String x:Key="RegisterSubmitButton">Зарегистрироваться</system:String>
+
+    <system:String x:Key="MainWindowTitle">BookingService - Главная</system:String>
+    <system:String x:Key="AdminPanelButton">Админ</system:String>
+    <system:String x:Key="AlphabetSortButton">А - Я</system:String>
+    <system:String x:Key="CostAscSortButton">Цена ↑</system:String>
+    <system:String x:Key="CostDescSortButton">Цена ↓</system:String>
+
+    <system:String x:Key="AdminPanelTitle">BookingService - Панель администратора</system:String>
+    <system:String x:Key="AdminPanelHeader">Панель администратора</system:String>
+    <system:String x:Key="AddRoomButton">Добавить номер</system:String>
+    <system:String x:Key="EditRoomButton">Отредактировать номер</system:String>
+    <system:String x:Key="DeleteRoomButton">Удалить номер</system:String>
+
+    <system:String x:Key="AddRoomTitle">BookingService - Добавить номер</system:String>
+    <system:String x:Key="EditRoomTitle">BookingService - Редактирование номера</system:String>
+    <system:String x:Key="NameLabel">Название:</system:String>
+    <system:String x:Key="ShortDescriptionLabel">Краткое описание:</system:String>
+    <system:String x:Key="FullDescriptionLabel">Полное описание:</system:String>
+    <system:String x:Key="CategoryLabel">Категория:</system:String>
+    <system:String x:Key="RatingLabel">Рейтинг (0-5):</system:String>
+    <system:String x:Key="PriceLabel">Цена за ночь:</system:String>
+    <system:String x:Key="BedsLabel">Количество кроватей:</system:String>
+    <system:String x:Key="StarsLabel">Количество звёзд (1-5):</system:String>
+    <system:String x:Key="AmenitiesLabel">Удобства (через запятую):</system:String>
+    <system:String x:Key="BalconyLabel">Есть балкон:</system:String>
+    <system:String x:Key="NonSmokingLabel">Не для курящих:</system:String>
+    <system:String x:Key="ImagePathLabel">Путь к изображению:</system:String>
+    <system:String x:Key="BrowseButton">Обзор</system:String>
+    <system:String x:Key="SaveButton">Сохранить</system:String>
+    <system:String x:Key="AddButton">Добавить</system:String>
+    <system:String x:Key="NightLabel">ночь</system:String>
+    <system:String x:Key="SeparatorLabel"> |</system:String>
+
+    <system:String x:Key="DeleteRoomTitle">BookingService - Удаление номера</system:String>
+    <system:String x:Key="SearchButton">Найти</system:String>
+    <system:String x:Key="SelectedRoomLabel">Выбранный номер:</system:String>
+    <system:String x:Key="DeleteButton">Удалить</system:String>
+
+    <system:String x:Key="ProfileHeader">Профиль</system:String>
+    <system:String x:Key="ThemeLabel">Тема</system:String>
+    <system:String x:Key="LanguageLabel">Язык</system:String>
+
+    <system:String x:Key="RefreshButton">Обновить</system:String>
+</ResourceDictionary>

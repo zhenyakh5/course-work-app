@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" Namespace="HotelModelFirst" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="HotelModelFirstContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="HotelModelFirst.User" />
+    <EntitySet Name="HotelRooms" EntityType="HotelModelFirst.HotelRoom" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Nullable="false" />
+    <Property Name="IsAdmin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HotelRoom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Nullable="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="200" Nullable="true" />
+    <Property Name="FullDescription" Type="String" MaxLength="4000" Nullable="true" />
+    <Property Name="ImagePath" Type="String" MaxLength="255" Nullable="true" />
+    <Property Name="Category" Type="String" MaxLength="50" Nullable="true" />
+    <Property Name="Rating" Type="Double" Nullable="true" />
+    <Property Name="Price" Type="Double" Nullable="true" />
+    <Property Name="NumberOfBeds" Type="Int32" Nullable="true" />
+    <Property Name="IsAvailable" Type="Boolean" Nullable="false" />
+    <Property Name="Amenities" Type="String" MaxLength="4000" Nullable="true" />
+    <Property Name="Stars" Type="Int32" Nullable="true" />
+    <Property Name="HasBalcony" Type="Boolean" Nullable="false" />
+    <Property Name="IsNonSmoking" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>
