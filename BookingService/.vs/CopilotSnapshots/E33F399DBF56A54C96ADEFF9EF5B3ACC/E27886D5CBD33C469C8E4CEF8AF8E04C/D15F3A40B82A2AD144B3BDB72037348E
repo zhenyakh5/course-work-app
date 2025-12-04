@@ -1,0 +1,14 @@
+﻿using BookingService.MVVM.Models;
+using System.Windows;
+
+namespace BookingService.MVVM.Views
+{
+    public partial class RoomWindow : Window
+    {
+        public RoomWindow(HotelRoom room)
+        {
+            InitializeComponent();
+            DataContext = room;
+        }
+    }
+}

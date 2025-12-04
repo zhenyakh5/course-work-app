@@ -1,0 +1,58 @@
+﻿using BookingService.MVVM.Services;
+using System;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
+
+namespace BookingService.MVVM.ViewModels
+{
+    public class ProfileViewModel : ViewModelBase
+    {
+        private readonly AppDbContext _context;
+        private readonly INavigationService _navigationService;
+        private string _username;
+
+        public string Username { get => _username; set { _username = value; OnPropertyChanged(); } }
+
+        public ICommand SaveCommand { get; }
+
+        public ProfileViewModel(AppDbContext context, INavigationService navigationService)
+        {
+            _context = context;
+            _navigationService = navigationService;
+
+            SaveCommand = new RelayCommand(Save);
+
+            LoadUser();
+        }
+
+        private void LoadUser()
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == SessionManager.CurrentUser.Id);
+            if (user != null)
+            {
+                Username = user.Username;
+            }
+        }
+
+        private void Save(object obj)
+        {
+            try
+            {
+                var user = _context.Users.FirstOrDefault(u => u.Id == SessionManager.CurrentUser.Id);
+                if (user == null) return;
+
+                user.Username = Username;
+                _context.SaveChanges();
+
+                MessageBox.Show("Изменения сохранены успешно!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Close window via navigation service
+                _navigationService.CloseWindow();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при сохранении данных: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
+}

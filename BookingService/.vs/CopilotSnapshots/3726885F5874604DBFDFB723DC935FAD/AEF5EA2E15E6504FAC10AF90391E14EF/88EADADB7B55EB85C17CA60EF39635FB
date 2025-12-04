@@ -1,0 +1,177 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Cursor x:Key="NormalCursor">D:\4sem\oop\BookingService\Resources\Cursors\pointer.cur</Cursor>
+    <Cursor x:Key="WriteCursor">D:\4sem\oop\BookingService\Resources\Cursors\text.cur</Cursor>
+    <Cursor x:Key="LinkCursor">D:\4sem\oop\BookingService\Resources\Cursors\link.cur</Cursor>
+
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+    </Style>
+
+    <Style TargetType="TextBox">
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Background" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LightAccentBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="MinHeight" Value="30"/>
+        <Setter Property="Cursor" Value="{DynamicResource WriteCursor}"/>
+
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Text.Length, RelativeSource={RelativeSource Self}}" Value="0">
+                <Setter Property="ToolTip" Value="Введите текст"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource ErrorBrush}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="PasswordBox">
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Background" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LightAccentBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="MinHeight" Value="30"/>
+        <Setter Property="Cursor" Value="{DynamicResource WriteCursor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="{TemplateBinding Padding}">
+                        <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource LightAccentBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="Foreground" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="10 5"/>
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="Cursor" Value="{DynamicResource LinkCursor}"/>
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                                       From="0.7" To="1" Duration="0:0:0.3"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SecondaryButton" BasedOn="{StaticResource PrimaryButton}" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource LightAccentBrush}"/>
+        <Setter Property="Cursor" Value="{DynamicResource LinkCursor}"/>
+    </Style>
+
+    <Style x:Key="DeleteButton" BasedOn="{StaticResource PrimaryButton}" TargetType="Button">
+        <Setter Property="Background" Value="{DynamicResource ErrorBrush}"/>
+        <Setter Property="Cursor" Value="{DynamicResource LinkCursor}"/>
+    </Style>
+
+    <Style TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="Background" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource LightAccentBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="MinHeight" Value="30"/>
+
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True"/>
+                    <Condition Property="IsDropDownOpen" Value="False"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="BorderBrush" Value="{DynamicResource AccentBrush}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RoomCardStyle" TargetType="Border">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BorderBrush" Value="Gray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="Background" Value="{DynamicResource WhiteBrush}"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="MinWidth" Value="280"/>
+        <Setter Property="Cursor" Value="{DynamicResource LinkCursor}"/>
+    </Style>
+
+    <Style x:Key="FormLabelText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="0,10,0,5"/>
+        <Setter Property="Cursor" Value="{DynamicResource WriteCursor}"/>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="HeaderLabel" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,20,0,0"/>
+    </Style>
+
+    <Style x:Key="FormLabel" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="Margin" Value="0,15,0,5"/>
+    </Style>
+
+    <Style x:Key="WindowButtonStyle" TargetType="Button">
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5,0,0,0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#3D3D3D"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\5sem\course-work\BookingService\obj\Debug\
+D:\5sem\course-work\course-work-app\BookingService\obj\Debug\
 BookingService
 none
 false
 DEBUG;TRACE
-D:\5sem\course-work\BookingService\App.xaml
-11-2109387948
+D:\5sem\course-work\course-work-app\BookingService\App.xaml
+121432836879
 
-362006737622
-25535402000
-MVVM\Views\AddRoom.xaml;MVVM\Views\AdminPanel.xaml;MVVM\Views\DeleteRoom.xaml;MVVM\Views\EditRoom.xaml;MVVM\Views\LoginWindow.xaml;MainWindow.xaml;ProfileWindow.xaml;MVVM\Views\RegisterWindow.xaml;Resources\Languages\Lang_ru-RU.xaml;Resources\Themes\LightTheme.xaml;Styles.xaml;
+371448938509
+251847932817
+MVVM\Views\AddRoom.xaml;MVVM\Views\AdminPanel.xaml;MVVM\Views\DeleteRoom.xaml;MVVM\Views\EditRoom.xaml;MVVM\Views\LoginWindow.xaml;MainWindow.xaml;MVVM\Views\RoomWindow.xaml;ProfileWindow.xaml;MVVM\Views\RegisterWindow.xaml;Resources\Languages\Lang_ru-RU.xaml;Resources\Themes\LightTheme.xaml;Styles.xaml;
 
 False
 

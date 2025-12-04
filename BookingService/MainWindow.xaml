@@ -9,7 +9,7 @@
         Width="1440"
         Height="1024"
         WindowStartupLocation="CenterScreen"
-        Background="{DynamicResource SecondaryBrush}"
+        Background="{DynamicResource BackgroundBrush}"
         Cursor="{StaticResource NormalCursor}"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 
@@ -19,99 +19,132 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="{DynamicResource PrimaryBrush}">
+        <!-- Header -->
+        <Grid Grid.Row="0" Background="{DynamicResource AccentBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="5">
-                <Button x:Name="ProfileWindow" Content="{DynamicResource ProfileHeader}" 
-                        Style="{DynamicResource PrimaryButton}"
-                        FontSize="16" Margin="0,0,10,0"
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="12">
+                <Button x:Name="ProfileWindow" Content="Профиль" 
+                        Style="{DynamicResource SecondaryButton}"
+                        FontSize="14" Margin="0,0,10,0"
                         Command="{x:Static local:MainWindow.ProfileCommand}"/>
 
-                <Button x:Name="AdminPanelButton" Content="{DynamicResource AdminPanelButton}"
-                        Style="{DynamicResource PrimaryButton}"
-                        FontSize="16"
+                <Button x:Name="AdminPanelButton" Content="Панель админа"
+                        Style="{DynamicResource SecondaryButton}"
+                        FontSize="14"
                         Command="{x:Static local:MainWindow.AdminPanelCommand}" Margin="0,0,10,0"/>
 
-                <Button x:Name="RefreshButton" Content="{DynamicResource RefreshButton}" 
-                        Style="{DynamicResource PrimaryButton}"
-                        FontSize="16" Margin="0,0,10,0"
+                <Button x:Name="RefreshButton" Content="Обновить" 
+                        Style="{DynamicResource SecondaryButton}"
+                        FontSize="14" Margin="0,0,10,0"
                         Command="{x:Static local:MainWindow.RefreshInfo}"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label Content="{DynamicResource SearchLabel}" FontSize="18" FontWeight="Bold" Foreground="White"/>
-                <TextBox FontSize="16" x:Name="SearchBox" Width="250" Height="30" 
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12">
+                <TextBox FontSize="16" x:Name="SearchBox" Width="36" Height="36" 
                          Style="{DynamicResource {x:Type TextBox}}"
-                         TextChanged="SearchBox_TextChanged" MinWidth="200"/>
+                         TextChanged="SearchBox_TextChanged" MinWidth="260"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="2" Orientation="Vertical" Margin="5">
-                <Label Content="{DynamicResource SortLabel}" FontSize="18" FontWeight="Bold" Foreground="White" 
-                       HorizontalAlignment="Center"/>
+            <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" Margin="12">
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="AlphabetSort" Content="{DynamicResource AlphabetSortButton}" 
+                    <Button x:Name="AlphabetSort" Content="A-Z" 
                             Style="{DynamicResource SecondaryButton}"
-                            FontSize="16" Margin="0,0,5,0"
+                            FontSize="14" Margin="0,0,6,0"
                             Command="{x:Static local:MainWindow.AlphabetSortCommand}"/>
-                    <Button x:Name="CostAscSort" Content="{DynamicResource CostAscSortButton}" 
+                    <Button x:Name="CostAscSort" Content="Цена ↑" 
                             Style="{DynamicResource SecondaryButton}"
-                            FontSize="16" Margin="0,0,5,0"
+                            FontSize="14" Margin="0,0,6,0"
                             Command="{x:Static local:MainWindow.CostAscSortCommand}"/>
-                    <Button x:Name="CostDiscSort" Content="{DynamicResource CostDescSortButton}" 
+                    <Button x:Name="CostDiscSort" Content="Цена ↓" 
                             Style="{DynamicResource SecondaryButton}"
-                            FontSize="16"
+                            FontSize="14"
                             Command="{x:Static local:MainWindow.CostDescSortCommand}"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
 
-        <ScrollViewer Grid.Row="1" Margin="10" HorizontalScrollBarVisibility="Disabled">
+        <!-- Rooms list -->
+        <ScrollViewer Grid.Row="1" Margin="16" HorizontalScrollBarVisibility="Disabled" Background="{DynamicResource BackgroundBrush}">
             <ItemsControl ItemsSource="{Binding Rooms}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" ItemHeight="Auto" ItemWidth="Auto"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
+
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border Style="{DynamicResource RoomCardStyle}">
-                            <StackPanel>
-                                <Image Source="{Binding ImagePath}" Width="280" Height="180" Stretch="UniformToFill"/>
-                                <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Margin="0,5,0,0"/>
-                                <TextBlock Text="{Binding ShortDescription}" FontSize="14" TextWrapping="Wrap" Margin="0,5,0,0"/>
-                                <TextBlock Text="{Binding FullDescription}" FontSize="14" TextWrapping="Wrap" Margin="0,5,0,0"/>
-                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                    <TextBlock Text="{Binding Category}" FontSize="14" FontWeight="Bold"/>
-                                    <TextBlock Text="{Binding Rating, StringFormat={}★{0:F1}}" FontSize="14" Margin="10,0,0,0" Foreground="#FFD68910"/>
-                                </StackPanel>
+                        <Border Style="{DynamicResource RoomCardStyle}" Margin="12">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="220"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
 
-                                <TextBlock FontSize="14" Margin="0,5,0,0">
-                            <Run Text="{DynamicResource PriceLabel}"/>
-                            <Run Text="{Binding Price, StringFormat=' {0:C}'}"/>
-                            <Run Text="/"/>
-                            <Run Text="{DynamicResource NightLabel}"/>
-                                </TextBlock>
+                                <!-- Image -->
+                                <Border Grid.Column="0" CornerRadius="6" Background="#FFF" Margin="0" Height="160" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Source="{Binding ImagePath}" Stretch="UniformToFill" Width="200" Height="160"/>
+                                </Border>
 
-                                <TextBlock FontSize="14">
-                            <Run Text="{DynamicResource BedsLabel}"/>
-                            <Run Text="{Binding NumberOfBeds}"/>
-                                </TextBlock>
+                                <!-- Details -->
+                                <Grid Grid.Column="1" Margin="12,6,6,6">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <TextBlock Text="{Binding Amenities}" FontSize="12" TextWrapping="Wrap" Margin="0,5,0,0" FontStyle="Italic"/>
+                                    <!-- Name and price: use Grid for left/right layout -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center"/>
+                                        <!-- Price badge aligned right -->
+                                        <Border Grid.Column="1" Background="{DynamicResource AccentBrush}" CornerRadius="6" Padding="8,4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8,0,0,0">
+                                            <TextBlock Text="{Binding Price, StringFormat=' {0:C} / ночь'}" Foreground="{DynamicResource WhiteBrush}" FontWeight="SemiBold"/>
+                                        </Border>
+                                    </Grid>
 
-                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                                    <TextBlock Text="{DynamicResource BalconyLabel}" FontSize="12"/>
-                                    <TextBlock Text="{Binding HasBalcony}" FontSize="12" FontWeight="Bold"/>
-                                    <TextBlock Text="{DynamicResource SeparatorLabel}" FontSize="12" Margin="5,0,0,0"/>
-                                    <TextBlock Text="{DynamicResource NonSmokingLabel}" FontSize="12"/>
-                                    <TextBlock Text="{Binding IsNonSmoking}" FontSize="12" FontWeight="Bold"/>
-                                </StackPanel>
-                            </StackPanel>
+                                    <!-- Short description: placed in its own row to avoid overlapping -->
+                                    <TextBlock Grid.Row="1" Text="{Binding ShortDescription}" FontSize="13" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" />
+
+                                    <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,8,0,0">
+                                        <TextBlock Text="{Binding FullDescription}" FontSize="13" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextBrush}" MaxWidth="600" Margin="0,0,5,0"/>
+
+                                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                            <TextBlock Text="Категория: " FontWeight="Bold" FontSize="12"/>
+                                            <TextBlock Text="{Binding Category}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+
+                                            <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
+
+                                            <TextBlock Text="Кроватей: " FontWeight="Bold" FontSize="12"/>
+                                            <TextBlock Text="{Binding NumberOfBeds}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+
+                                            <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
+
+                                            <TextBlock Text="Звёзды: " FontWeight="Bold" FontSize="12"/>
+                                            <TextBlock Text="{Binding Stars}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+                                        </StackPanel>
+
+                                        <TextBlock Text="Удобства:" FontWeight="Bold" Margin="0,8,0,0"/>
+                                        <TextBlock Text="{Binding Amenities}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="Wrap"/>
+                                    </StackPanel>
+
+                                    <!-- Actions row -->
+                                    <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+                                        <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Margin="0,0,8,0"/>
+                                        <Button Content="Подробнее" Style="{DynamicResource SecondaryButton}" Click="ShowRoom_Click" Tag="{Binding Id}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

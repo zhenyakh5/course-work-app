@@ -1,0 +1,49 @@
+﻿<Window x:Class="BookingService.MVVM.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookingService"
+        mc:Ignorable="d"
+        Title="{DynamicResource LoginWindowTitle}" 
+        Height="500" 
+        Width="400"
+        Background="{DynamicResource SecondaryBrush}"
+        Cursor="{StaticResource NormalCursor}"
+        WindowStartupLocation="CenterScreen"
+        Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Orientation="Vertical" 
+                    Margin="0,20,0,0">
+
+            <Label Content="{DynamicResource LoginHeader}" 
+                   Style="{DynamicResource HeaderLabel}"/>
+
+            <Label Content="{DynamicResource UsernameLabel}" Style="{DynamicResource FormLabel}"/>
+            <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{DynamicResource {x:Type TextBox}}"/>
+
+            <Label Content="{DynamicResource PasswordLabel}" Style="{DynamicResource FormLabel}"/>
+            <PasswordBox x:Name="PasswordBox" 
+                         Style="{DynamicResource {x:Type PasswordBox}}"/>
+
+            <StackPanel Orientation="Horizontal" 
+                        VerticalAlignment="Center" 
+                        HorizontalAlignment="Center" 
+                        Margin="0,50,0,0">
+
+                <Button Content="{DynamicResource LoginButton}" 
+                        Style="{DynamicResource PrimaryButton}" 
+                        Command="{Binding LoginCommand}"/>
+
+                <Button Content="{DynamicResource RegisterButton}" 
+                        Style="{DynamicResource SecondaryButton}" 
+                        Command="{Binding RegisterCommand}"
+                        Margin="30,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

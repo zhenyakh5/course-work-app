@@ -1,0 +1,25 @@
+﻿<Window x:Class="BookingService.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookingService"
+        mc:Ignorable="d"
+        Title="Личный кабинет" 
+        Height="360" 
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}">
+
+    <Grid Margin="20">
+        <StackPanel>
+            <Label Content="{DynamicResource ProfileHeader}" Style="{DynamicResource HeaderLabel}" HorizontalContentAlignment="Center"/>
+
+            <TextBlock Text="{DynamicResource UsernameLabel}" Style="{DynamicResource FormLabelText}"/>
+            <TextBox x:Name="UsernameTextBox" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+
+            <Button Content="{DynamicResource SaveButton}" Style="{DynamicResource PrimaryButton}" FontSize="16" 
+                    Margin="0,8,0,0" Command="{x:Static local:ProfileWindow.SaveCommand}" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Window></Window>
