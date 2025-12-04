@@ -153,3 +153,5 @@ D:\5sem\course-work\course-work-app\BookingService\obj\Debug\BookingService.pdb
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\BookingService.exe.config
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\RoomWindow.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\RoomWindow.g.cs
+D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\BookingsAdmin.baml
+D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\BookingsAdmin.g.cs

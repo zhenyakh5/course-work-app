@@ -1,0 +1,11 @@
+﻿namespace BookingService.Services
+{
+    public interface INavigationService
+    {
+        void NavigateToAdminPanel();
+        void NavigateToAddRoom();
+        void NavigateToEditRoom();
+        void NavigateToDeleteRoom();
+        void CloseWindow();
+    }
+}

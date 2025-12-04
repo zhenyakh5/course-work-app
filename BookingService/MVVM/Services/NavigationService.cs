@@ -40,6 +40,14 @@ namespace BookingService.Services
             CloseWindow();
         }
 
+        public void NavigateToManageBookings()
+        {
+            var wnd = new BookingsAdmin();
+            wnd.DataContext = new BookingService.MVVM.ViewModels.BookingsAdminViewModel();
+            wnd.Show();
+            
+        }
+
         public void CloseWindow()
         {
             _currentWindow?.Close();

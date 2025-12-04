@@ -113,6 +113,7 @@
     <Compile Include="MVVM\Converters\StringToVisibilityConverter.cs" />
     <Compile Include="MVVM\ViewModels\AddRoomViewModel.cs" />
     <Compile Include="MVVM\ViewModels\AdminPanelViewModel.cs" />
+    <Compile Include="MVVM\ViewModels\BookingsAdminViewModel.cs" />
     <Compile Include="MVVM\ViewModels\DeleteRoomViewModel.cs" />
     <Compile Include="MVVM\ViewModels\EditRoomViewModel.cs" />
     <Compile Include="MVVM\ViewModels\RoomFormViewModel.cs" />
@@ -122,6 +123,9 @@
     </Compile>
     <Compile Include="MVVM\Views\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\Views\BookingsAdmin.xaml.cs">
+      <DependentUpon>BookingsAdmin.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\Views\DeleteRoom.xaml.cs">
       <DependentUpon>DeleteRoom.xaml</DependentUpon>
@@ -155,6 +159,9 @@
     </Page>
     <Page Include="MVVM\Views\AdminPanel.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\Views\BookingsAdmin.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVVM\Views\DeleteRoom.xaml">

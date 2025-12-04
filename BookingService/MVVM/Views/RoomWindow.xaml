@@ -33,8 +33,18 @@
                     <Run Text="{DynamicResource NightLabel}"/>
                 </TextBlock>
 
-                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                    <Button Content="{DynamicResource BookButton}" Style="{DynamicResource PrimaryButton}" Width="140"/>
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{DynamicResource CheckInLabel}" FontWeight="Bold"/>
+                        <DatePicker SelectedDate="{Binding CheckInDate}" Width="160" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Margin="12,0,0,0">
+                        <TextBlock Text="{DynamicResource CheckOutLabel}" FontWeight="Bold"/>
+                        <DatePicker SelectedDate="{Binding CheckOutDate}" Width="160" />
+                    </StackPanel>
+
+                    <Button Content="{DynamicResource BookButton}" Style="{DynamicResource PrimaryButton}" Width="140" Margin="12,18,0,0" Command="{Binding BookCommand}"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
