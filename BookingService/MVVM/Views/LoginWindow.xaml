@@ -11,7 +11,7 @@
         Background="{DynamicResource BackgroundBrush}"
         Cursor="{StaticResource NormalCursor}"
         WindowStartupLocation="CenterScreen"
-        Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
+        Icon="D:\5sem\course-work\course-work-app\BookingService\Resources\icon.ico">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" 

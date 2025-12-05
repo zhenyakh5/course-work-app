@@ -50,7 +50,7 @@
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Style="{DynamicResource RoomCardStyle}" Margin="8" Width="320">
+                            <Border Style="{DynamicResource RoomCardStyle}" Margin="8" Width="320" Tag="{Binding Room.Id}" Cursor="Hand" MouseLeftButtonUp="ShowRoom_Click">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="140"/>
@@ -65,19 +65,75 @@
                                         <TextBlock Text="{Binding Room.Name}" FontSize="16" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" />
                                         <TextBlock Text="{Binding Room.ShortDescription}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextTrimming="CharacterEllipsis" />
                                         <TextBlock Text="{Binding TotalPrice, StringFormat={}{0:C}}" FontWeight="SemiBold" Margin="0,6,0,0" />
-                                        <TextBlock Margin="0,4,0,0" Foreground="{DynamicResource MutedTextBrush}">
-                                            <Run Text="Статус: "/>
-                                            <Run Text="{Binding Status}" />
-                                        </TextBlock>
+
+                                        <!-- Status badge -->
+                                        <Border x:Name="StatusBadge" CornerRadius="6" Padding="0,2" Margin="0,6,0,0" HorizontalAlignment="Left" Background="Transparent">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Background" Value="Transparent"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding Status}" Value="Ожидание">
+                                                            <Setter Property="Background" Value="#FFF3CD"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="Подтверждено">
+                                                            <Setter Property="Background" Value="#D4EDDA"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="Отменено">
+                                                            <Setter Property="Background" Value="#E2E3E5"/>
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding Status}" Value="Выполнено">
+                                                            <Setter Property="Background" Value="#E2E3E5"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+
+                                            <TextBlock x:Name="StatusText" Text="{Binding Status}" FontWeight="SemiBold">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Foreground" Value="{DynamicResource TextBrush}"/>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Ожидание">
+                                                                <Setter Property="Foreground" Value="#856404"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Подтверждено">
+                                                                <Setter Property="Foreground" Value="#155724"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Отменено">
+                                                                <Setter Property="Foreground" Value="#6C757D"/>
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Выполнено">
+                                                                <Setter Property="Foreground" Value="#6C757D"/>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </Border>
+
                                         <TextBlock Margin="0,2,0,0" Foreground="{DynamicResource MutedTextBrush}">
                                             <Run Text="Даты: "/>
-                                            <Run Text="{Binding CheckInDate, StringFormat={}{0:d}}"/>
+                                            <Run Text="{Binding CheckInDate, StringFormat={}{0:dd.MM.yyyy}}"/>
                                             <Run Text=" - "/>
-                                            <Run Text="{Binding CheckOutDate, StringFormat={}{0:d}}"/>
+                                            <Run Text="{Binding CheckOutDate, StringFormat={}{0:dd.MM.yyyy}}"/>
                                         </TextBlock>
 
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
-                                            <Button Content="Отменить" Tag="{Binding Id}" Click="CancelBooking_Click" Style="{DynamicResource DeleteButton}"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,9,0,0">
+                                            <Button Content="Отменить" Tag="{Binding Id}" Click="CancelBooking_Click">
+                                                <Button.Style>
+                                                    <Style TargetType="Button" BasedOn="{StaticResource DeleteButton}">
+                                                        <Setter Property="Visibility" Value="Visible" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Отменено">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                            </DataTrigger>
+                                                            <DataTrigger Binding="{Binding Status}" Value="Выполнено">
+                                                                <Setter Property="Visibility" Value="Collapsed" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                            </Button>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>

@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:BookingService.MVVM.Views"
         mc:Ignorable="d"
         Title="BookingService - Регистрация" 
-        Height="562" 
+        Height="620" 
         Width="420" 
         Background="{DynamicResource BackgroundBrush}"
         WindowStartupLocation="CenterScreen"
-        Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
+        Icon="D:\5sem\course-work\course-work-app\BookingService\Resources\icon.ico">
 
     <Grid>
         <StackPanel VerticalAlignment="Center" 

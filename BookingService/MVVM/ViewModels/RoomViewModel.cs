@@ -1,15 +1,18 @@
 ﻿using BookingService.MVVM.Models;
+using BookingService.Services;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using System.Data.Entity;
+using System.Windows.Navigation;
 
 namespace BookingService.MVVM.ViewModels
 {
     public class RoomViewModel : ViewModelBase
     {
         private readonly AppDbContext _context = new AppDbContext();
+        private readonly INavigationService _navigationService;
 
         private HotelRoom _room;
         public HotelRoom Room
@@ -19,10 +22,9 @@ namespace BookingService.MVVM.ViewModels
             {
                 _room = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(RoomIsAvailableText));
+                UpdateAvailabilityInfo();
                 OnPropertyChanged(nameof(RoomHasBalconyText));
                 OnPropertyChanged(nameof(RoomIsNonSmokingText));
-                OnPropertyChanged(nameof(IsBookable));
                 CommandManager.InvalidateRequerySuggested();
             }
         }
@@ -34,6 +36,13 @@ namespace BookingService.MVVM.ViewModels
         private DateTime _checkInDate = DateTime.Now.Date;
         private DateTime _checkOutDate = DateTime.Now.Date.AddDays(1);
 
+        private string _overlappingBookingMessage = string.Empty;
+        public string OverlappingBookingMessage
+        {
+            get => _overlappingBookingMessage;
+            set { _overlappingBookingMessage = value; OnPropertyChanged(); }
+        }
+
         public DateTime CheckInDate
         {
             get => _checkInDate;
@@ -41,8 +50,7 @@ namespace BookingService.MVVM.ViewModels
             {
                 _checkInDate = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(IsBookable));
-                OnPropertyChanged(nameof(RoomIsAvailableText));
+                UpdateAvailabilityInfo();
                 CommandManager.InvalidateRequerySuggested();
             }
         }
@@ -54,8 +62,7 @@ namespace BookingService.MVVM.ViewModels
             {
                 _checkOutDate = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(IsBookable));
-                OnPropertyChanged(nameof(RoomIsAvailableText));
+                UpdateAvailabilityInfo();
                 CommandManager.InvalidateRequerySuggested();
             }
         }
@@ -79,6 +86,48 @@ namespace BookingService.MVVM.ViewModels
             catch (Exception)
             {
                 Room = null;
+            }
+        }
+
+        private void UpdateAvailabilityInfo()
+        {
+            OnPropertyChanged(nameof(RoomIsAvailableText));
+
+            if (Room == null)
+            {
+                OverlappingBookingMessage = string.Empty;
+                return;
+            }
+
+            var overlapping = FindOverlappingBooking(Room.Id, CheckInDate, CheckOutDate);
+            if (overlapping != null)
+            {
+                OverlappingBookingMessage = $"Выбранный Вами номер забронирован с {overlapping.CheckInDate:dd/MM/yyyy} по {overlapping.CheckOutDate:dd/MM/yyyy}.";
+            }
+            else
+            {
+                OverlappingBookingMessage = string.Empty;
+            }
+
+            CommandManager.InvalidateRequerySuggested();
+            OnPropertyChanged(nameof(IsBookable));
+        }
+
+        private Booking FindOverlappingBooking(int roomId, DateTime checkIn, DateTime checkOut)
+        {
+            try
+            {
+                // find a confirmed booking that overlaps requested range
+                var booking = _context.Bookings
+                    .Where(b => b.RoomId == roomId && b.Status == "Подтверждено" && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut))
+                    .OrderBy(b => b.CheckInDate)
+                    .FirstOrDefault();
+
+                return booking;
+            }
+            catch
+            {
+                return null;
             }
         }
 
@@ -145,13 +194,13 @@ namespace BookingService.MVVM.ViewModels
                 _context.Bookings.Add(booking);
                 _context.SaveChanges();
 
-                // notify other parts of the app if needed
                 _context.NotifyDataChanged();
 
                 MessageBox.Show("Бронь создана и отправлена на подтверждение.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                OnPropertyChanged(nameof(RoomIsAvailableText));
-                OnPropertyChanged(nameof(IsBookable));
-                CommandManager.InvalidateRequerySuggested();
+                UpdateAvailabilityInfo();
+                //CommandManager.InvalidateRequerySuggested();
+                _navigationService.CloseWindow();
+                
             }
             catch (Exception ex)
             {

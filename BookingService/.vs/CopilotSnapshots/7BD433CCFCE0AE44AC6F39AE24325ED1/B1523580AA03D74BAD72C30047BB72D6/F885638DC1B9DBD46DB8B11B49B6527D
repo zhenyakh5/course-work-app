@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="BookingService.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookingService"
+        mc:Ignorable="d"
+        Title="BookingService - Личный кабинет" 
+        Height="600" 
+        Width="960"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Label Content="Профиль" Style="{DynamicResource HeaderLabel}" HorizontalContentAlignment="Center"/>
+
+            <TextBlock Text="Логин" Style="{DynamicResource FormLabelText}"/>
+            <TextBox x:Name="UsernameTextBox" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12" Width="280"/>
+
+            <TextBlock Text="Текущий пароль" Style="{DynamicResource FormLabelText}"/>
+            <PasswordBox x:Name="CurrentPasswordBox" Margin="0,2,0,12" Width="280"/>
+
+            <TextBlock Text="Новый пароль" Style="{DynamicResource FormLabelText}"/>
+            <PasswordBox x:Name="NewPasswordBox" Margin="0,2,0,12" Width="280"/>
+
+            <TextBlock Text="Подтвердите новый пароль" Style="{DynamicResource FormLabelText}"/>
+            <PasswordBox x:Name="ConfirmPasswordBox" Margin="0,2,0,12" Width="280"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
+                <Button Content="Сохранить" Style="{DynamicResource PrimaryButton}" FontSize="14" Width="120" Click="SaveAccount_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Right: bookings -->
+        <GroupBox Header="Мои бронирования" Grid.Column="1" Margin="12,0,0,0">
+            <ScrollViewer>
+                <ItemsControl x:Name="BookingsItems" ItemsSource="{Binding UserBookings}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{DynamicResource RoomCardStyle}" Margin="8" Width="320" Tag="{Binding Room.Id}" Cursor="Hand" MouseLeftButtonUp="ShowRoom_Click">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="140"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Grid.Column="0" CornerRadius="6" Background="#FFF" Height="110" Width="132" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="{Binding Room.ImagePath}" Stretch="UniformToFill" Width="132" Height="110"/>
+                                    </Border>
+
+                                    <StackPanel Grid.Column="1" Margin="8">
+                                        <TextBlock Text="{Binding Room.Name}" FontSize="16" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" />
+                                        <TextBlock Text="{Binding Room.ShortDescription}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Text="{Binding TotalPrice, StringFormat={}{0:C}}" FontWeight="SemiBold" Margin="0,6,0,0" />
+
+                                        <!-- Status badge -->
+                                        <Border x:Name="StatusBadge" CornerRadius="6" Padding="4,2" Margin="0,6,0,0" HorizontalAlignment="Left" Background="Transparent">
+                                            <TextBlock x:Name="StatusText" Text="{Binding Status}" Foreground="{DynamicResource TextBrush}" FontWeight="SemiBold"/>
+                                        </Border>
+
+                                        <TextBlock Margin="0,2,0,0" Foreground="{DynamicResource MutedTextBrush}">
+                                            <Run Text="Даты: "/>
+                                            <Run Text="{Binding CheckInDate, StringFormat={}{0:d}}"/>
+                                            <Run Text=" - "/>
+                                            <Run Text="{Binding CheckOutDate, StringFormat={}{0:d}}"/>
+                                        </TextBlock>
+
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+                                            <Button Content="Отменить" Tag="{Binding Id}" Click="CancelBooking_Click" Style="{DynamicResource DeleteButton}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+
+                                <DataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding Status}" Value="Ожидание">
+                                        <Setter TargetName="StatusBadge" Property="Background" Value="#FFF3CD"/>
+                                        <Setter TargetName="StatusText" Property="Foreground" Value="#856404"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Status}" Value="Подтверждено">
+                                        <Setter TargetName="StatusBadge" Property="Background" Value="#D4EDDA"/>
+                                        <Setter TargetName="StatusText" Property="Foreground" Value="#155724"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Status}" Value="Отменено">
+                                        <Setter TargetName="StatusBadge" Property="Background" Value="#E2E3E5"/>
+                                        <Setter TargetName="StatusText" Property="Foreground" Value="#6C757D"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Status}" Value="Выполнено">
+                                        <Setter TargetName="StatusBadge" Property="Background" Value="#E2E3E5"/>
+                                        <Setter TargetName="StatusText" Property="Foreground" Value="#6C757D"/>
+                                    </DataTrigger>
+                                </DataTemplate.Triggers>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </GroupBox>
+    </Grid>
+</Window>

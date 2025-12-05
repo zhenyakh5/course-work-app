@@ -10,7 +10,7 @@
         Height="1024"
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}"
-        Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
+        Icon="D:\5sem\course-work\course-work-app\BookingService\Resources\icon.ico">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -133,7 +133,6 @@
                                     </StackPanel>
 
                                     <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
-                                        <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Margin="0,0,8,0"/>
                                         <Button Content="Подробнее" Style="{DynamicResource SecondaryButton}" Click="ShowRoom_Click" Tag="{Binding Id}"/>
                                     </StackPanel>
                                 </Grid>

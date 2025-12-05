@@ -4,11 +4,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:conv="clr-namespace:BookingService.Converters"
         mc:Ignorable="d"
         Title="BookingService - Детали номера" 
         Height="600"
         Width="900"
+        WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}">
+    <Window.Resources>
+        <conv:StringToVisibilityConverter x:Key="StrToVis" />
+    </Window.Resources>
     <Grid Margin="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -27,7 +32,7 @@
 
             <StackPanel Grid.Column="1" Margin="16,0,0,0" VerticalAlignment="Top">
                 <TextBlock Text="{Binding Room.Name}" FontSize="22" FontWeight="Bold" Foreground="{DynamicResource TextBrush}"/>
-                <TextBlock Text="{Binding Room.ShortDescription}" FontSize="14" Foreground="{DynamicResource MutedTextBrush}" Margin="0,6,0,0" TextWrapping="Wrap" MaxWidth="520" TextTrimming="CharacterEllipsis"/>
+                <TextBlock Text="{Binding Room.ShortDescription}" FontSize="14" Foreground="{DynamicResource MutedTextBrush}" Margin="-15,6,0,0" TextWrapping="Wrap" MaxWidth="520" TextTrimming="CharacterEllipsis"/>
 
                 <TextBlock FontSize="16" FontWeight="SemiBold" Margin="0,8,0,0">
                     <Run Text="Цена:" />
@@ -38,17 +43,21 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0,12,0,0" VerticalAlignment="Center">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Дата въезда:" FontWeight="Bold"/>
+                        <TextBlock Text="Дата въезда:" FontWeight="Bold" Margin="0,0,0,5"/>
                         <DatePicker SelectedDate="{Binding CheckInDate}" Width="160" />
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical" Margin="12,0,0,0">
-                        <TextBlock Text="Дата выезда:" FontWeight="Bold"/>
+                        <TextBlock Text="Дата выезда:" FontWeight="Bold" Margin="0,0,0,5"/>
                         <DatePicker SelectedDate="{Binding CheckOutDate}" Width="160" />
                     </StackPanel>
 
-                    <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Width="140" Margin="12,18,0,0" Command="{Binding BookCommand}"/>
+                    <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Width="140" Margin="12,18,0,0" Command="{Binding BookCommand}" IsEnabled="{Binding IsBookable}"/>
                 </StackPanel>
+
+                <!-- Overlapping booking message -->
+                <TextBlock Text="{Binding OverlappingBookingMessage}" Margin="0,8,0,0" Foreground="#D9534F" Visibility="{Binding OverlappingBookingMessage, Converter={StaticResource StrToVis}}" />
+
             </StackPanel>
         </Grid>
 
@@ -69,14 +78,6 @@
 
                 <TextBlock Text="Звезды: " FontWeight="Bold"/>
                 <TextBlock Text="{Binding Room.Stars}" Foreground="{DynamicResource MutedTextBrush}"/>
-            </StackPanel>
-
-            <TextBlock Text="Удобства:" FontWeight="Bold" Margin="0,12,0,0"/>
-            <TextBlock Text="{Binding Room.Amenities}" TextWrapping="Wrap"/>
-
-            <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
-                <TextBlock Text="Доступен: " FontWeight="Bold"/>
-                <TextBlock Text="{Binding RoomIsAvailableText}" Foreground="{DynamicResource MutedTextBrush}"/>
 
                 <TextBlock Text="|" Margin="8,0" Foreground="{DynamicResource MutedTextBrush}"/>
 
@@ -85,9 +86,16 @@
 
                 <TextBlock Text="|" Margin="8,0" Foreground="{DynamicResource MutedTextBrush}"/>
 
-                <TextBlock Text="Курение:" FontWeight="Bold"/>
+                <TextBlock Text="Курение: " FontWeight="Bold"/>
                 <TextBlock Text="{Binding RoomIsNonSmokingText}" Foreground="{DynamicResource MutedTextBrush}"/>
+
             </StackPanel>
+
+            <TextBlock Text="Удобства:" FontWeight="Bold" Margin="0,12,0,0"/>
+            <TextBlock Text="{Binding Room.Amenities}" TextWrapping="Wrap"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+</StackPanel>
         </StackPanel>
     </Grid>
 </Window>

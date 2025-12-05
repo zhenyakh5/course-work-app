@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\5sem\\course-work\\course-work-app\\BookingService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|d:\\5sem\\course-work\\course-work-app\\bookingservice\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|d:\\5sem\\course-work\\course-work-app\\bookingservice\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\models\\hotelroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,24 +43,12 @@
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\views\\roomwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\viewmodels\\roomviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\services\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\services\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\resources\\languages\\lang_ru-ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:resources\\languages\\lang_ru-ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\resources\\themes\\lighttheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:resources\\themes\\lighttheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -59,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\views\\deleteroom.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\views\\deleteroom.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,10 +183,6 @@
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\5sem\\course-work\\course-work-app\\BookingService\\obj\\Debug\\MVVM\\Views\\EditRoom.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\MVVM\\Views\\EditRoom.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -205,6 +193,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|D:\\5sem\\course-work\\course-work-app\\BookingService\\mvvm\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04C4288F-3227-4392-A4A3-1CBD4EE13064}|BookingService.csproj|solutionrelative:mvvm\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Languages\\Lang_ru-RU.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\Languages\\Lang_ru-RU.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Themes\\LightTheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\Themes\\LightTheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -214,7 +210,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -229,33 +225,108 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DbContext.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\DbContext.cs",
-              "RelativeDocumentMoniker": "DbContext.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\DbContext.cs",
-              "RelativeToolTip": "DbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RoomViewModel.cs",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RoomViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM\\ViewModels\\RoomViewModel.cs",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RoomViewModel.cs",
+              "RelativeToolTip": "MVVM\\ViewModels\\RoomViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T08:30:11.124Z",
+              "WhenOpened": "2025-12-04T19:24:30.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "EditRoom.g.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\obj\\Debug\\MVVM\\Views\\EditRoom.g.cs",
-              "RelativeDocumentMoniker": "obj\\Debug\\MVVM\\Views\\EditRoom.g.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\obj\\Debug\\MVVM\\Views\\EditRoom.g.cs",
-              "RelativeToolTip": "obj\\Debug\\MVVM\\Views\\EditRoom.g.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\IRoomService.cs",
+              "RelativeDocumentMoniker": "MVVM\\Services\\IRoomService.cs",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\IRoomService.cs",
+              "RelativeToolTip": "MVVM\\Services\\IRoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:59:56.014Z"
+              "WhenOpened": "2025-11-16T12:15:44.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "INavigationService.cs",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\INavigationService.cs",
+              "RelativeDocumentMoniker": "MVVM\\Services\\INavigationService.cs",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\INavigationService.cs",
+              "RelativeToolTip": "MVVM\\Services\\INavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T12:23:25.184Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ProfileWindow.xaml",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml",
+              "RelativeDocumentMoniker": "ProfileWindow.xaml",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml",
+              "RelativeToolTip": "ProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-01T07:23:12.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Styles.xaml",
+              "RelativeDocumentMoniker": "Styles.xaml",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Styles.xaml*",
+              "RelativeToolTip": "Styles.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-31T07:31:29.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\LoginWindow.xaml",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "MVVM\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-21T16:47:22.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomWindow.xaml",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml",
+              "RelativeDocumentMoniker": "MVVM\\Views\\RoomWindow.xaml",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml",
+              "RelativeToolTip": "MVVM\\Views\\RoomWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-04T19:13:39.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileWindow.xaml.cs",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProfileWindow.xaml.cs",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml.cs",
+              "RelativeToolTip": "ProfileWindow.xaml.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T07:29:20.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Booking.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\Booking.cs",
@@ -263,11 +334,12 @@
               "RelativeToolTip": "MVVM\\Models\\Booking.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T20:15:07.243Z"
+              "WhenOpened": "2025-12-04T20:15:07.243Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "RoomWindow.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\RoomWindow.xaml.cs",
@@ -280,51 +352,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "RoomWindow.xaml",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\RoomWindow.xaml",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml",
-              "RelativeToolTip": "MVVM\\Views\\RoomWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-04T19:13:39.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Lang_ru-RU.xaml",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Languages\\Lang_ru-RU.xaml",
-              "RelativeDocumentMoniker": "Resources\\Languages\\Lang_ru-RU.xaml",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Languages\\Lang_ru-RU.xaml",
-              "RelativeToolTip": "Resources\\Languages\\Lang_ru-RU.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-31T07:38:38.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "MVVM\\Views\\LoginWindow.xaml",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\LoginWindow.xaml",
-              "RelativeToolTip": "MVVM\\Views\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T16:47:22.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RoomViewModel.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RoomViewModel.cs",
-              "RelativeDocumentMoniker": "MVVM\\ViewModels\\RoomViewModel.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RoomViewModel.cs",
-              "RelativeToolTip": "MVVM\\ViewModels\\RoomViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\DbContext.cs",
+              "RelativeDocumentMoniker": "DbContext.cs",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\DbContext.cs",
+              "RelativeToolTip": "DbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:24:30.403Z"
+              "WhenOpened": "2025-10-20T08:30:11.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 49,
               "Title": "LightTheme.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Themes\\LightTheme.xaml",
               "RelativeDocumentMoniker": "Resources\\Themes\\LightTheme.xaml",
@@ -335,31 +375,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IRoomService.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\IRoomService.cs",
-              "RelativeDocumentMoniker": "MVVM\\Services\\IRoomService.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\IRoomService.cs",
-              "RelativeToolTip": "MVVM\\Services\\IRoomService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:15:44.154Z"
+              "DocumentIndex": 48,
+              "Title": "Lang_ru-RU.xaml",
+              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Languages\\Lang_ru-RU.xaml",
+              "RelativeDocumentMoniker": "Resources\\Languages\\Lang_ru-RU.xaml",
+              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Resources\\Languages\\Lang_ru-RU.xaml",
+              "RelativeToolTip": "Resources\\Languages\\Lang_ru-RU.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-31T07:38:38.142Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "INavigationService.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\INavigationService.cs",
-              "RelativeDocumentMoniker": "MVVM\\Services\\INavigationService.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\INavigationService.cs",
-              "RelativeToolTip": "MVVM\\Services\\INavigationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T12:23:25.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "UserClass.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Models\\UserClass.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\UserClass.cs",
@@ -371,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "HotelRoom.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Models\\HotelRoom.cs",
               "RelativeDocumentMoniker": "MVVM\\Models\\HotelRoom.cs",
@@ -383,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AddRoom.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\AddRoom.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\AddRoom.xaml",
@@ -394,40 +421,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-20T08:29:17.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Styles.xaml",
-              "RelativeDocumentMoniker": "Styles.xaml",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Styles.xaml",
-              "RelativeToolTip": "Styles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-31T07:31:29.575Z"
+              "WhenOpened": "2025-10-20T08:29:17.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ProfileWindow.xaml",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml",
-              "RelativeDocumentMoniker": "ProfileWindow.xaml",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml",
-              "RelativeToolTip": "ProfileWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-01T07:23:12.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "SessionManager.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\SessionManager.cs",
               "RelativeDocumentMoniker": "SessionManager.cs",
@@ -439,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "StringToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Converters\\StringToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "MVVM\\Converters\\StringToVisibilityConverter.cs",
@@ -451,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 41,
               "Title": "RoomService.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\RoomService.cs",
               "RelativeDocumentMoniker": "MVVM\\Services\\RoomService.cs",
@@ -463,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 42,
               "Title": "CountToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Converters\\CountToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "MVVM\\Converters\\CountToVisibilityConverter.cs",
@@ -475,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 43,
               "Title": "BooleanToVisibilityConverter.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Converters\\BooleanToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "MVVM\\Converters\\BooleanToVisibilityConverter.cs",
@@ -487,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "AdminPanel.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\AdminPanel.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\AdminPanel.xaml",
@@ -510,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "RoomWindow.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RoomWindow.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\RoomWindow.xaml",
@@ -522,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\NavigationService.cs",
               "RelativeDocumentMoniker": "MVVM\\Services\\NavigationService.cs",
@@ -534,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Repository.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Patterns\\Repository.cs",
               "RelativeDocumentMoniker": "Patterns\\Repository.cs",
@@ -545,12 +551,8 @@
               "WhenOpened": "2025-10-20T08:30:00.392Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "RoomFormViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RoomFormViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\RoomFormViewModel.cs",
@@ -562,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\LoginViewModel.cs",
@@ -574,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\Patterns\\IRepository.cs",
               "RelativeDocumentMoniker": "Patterns\\IRepository.cs",
@@ -587,18 +589,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "ProfileWindow.xaml.cs",
-              "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ProfileWindow.xaml.cs",
-              "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\ProfileWindow.xaml.cs",
-              "RelativeToolTip": "ProfileWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwDMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T07:29:20.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
               "Title": "AdminPanel.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\AdminPanel.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\AdminPanel.xaml.cs",
@@ -610,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 30,
               "Title": "AddRoomViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\AddRoomViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\AddRoomViewModel.cs",
@@ -622,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 31,
               "Title": "DeleteRoomViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\DeleteRoomViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\DeleteRoomViewModel.cs",
@@ -634,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 47,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "MVVM\\Services\\AuthService.cs",
@@ -646,7 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 29,
               "Title": "EditRoomViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\EditRoomViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\EditRoomViewModel.cs",
@@ -658,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 36,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Services\\RelayCommand.cs",
               "RelativeDocumentMoniker": "MVVM\\Services\\RelayCommand.cs",
@@ -670,7 +660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "DeleteRoom.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\DeleteRoom.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\DeleteRoom.xaml",
@@ -681,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 35,
               "Title": "AddRoom.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\AddRoom.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\AddRoom.xaml.cs",
@@ -693,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 44,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -705,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 45,
               "Title": "App.config",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -717,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 32,
               "Title": "AdminPanelViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\AdminPanelViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\AdminPanelViewModel.cs",
@@ -729,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 34,
               "Title": "DeleteRoom.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\DeleteRoom.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\DeleteRoom.xaml.cs",
@@ -741,7 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 33,
               "Title": "EditRoom.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\EditRoom.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\EditRoom.xaml.cs",
@@ -753,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 37,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\ViewModelBase.cs",
@@ -765,18 +755,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 38,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "D:\\5sem\\course-work\\course-work-app\\BookingService\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T16:55:29.133Z"
+              "WhenOpened": "2025-05-21T16:55:29.133Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "EditRoom.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\EditRoom.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\EditRoom.xaml",
@@ -787,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "RegisterWindow.xaml",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RegisterWindow.xaml",
               "RelativeDocumentMoniker": "MVVM\\Views\\RegisterWindow.xaml",
@@ -798,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 39,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\ViewModels\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "MVVM\\ViewModels\\RegisterViewModel.cs",
@@ -810,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 40,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\LoginWindow.xaml.cs",
@@ -822,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 46,
               "Title": "RegisterWindow.xaml.cs",
               "DocumentMoniker": "D:\\5sem\\course-work\\course-work-app\\BookingService\\MVVM\\Views\\RegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM\\Views\\RegisterWindow.xaml.cs",

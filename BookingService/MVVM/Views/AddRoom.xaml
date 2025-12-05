@@ -11,7 +11,7 @@
         MinHeight="600"
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}"
-        Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
+        Icon="D:\5sem\course-work\course-work-app\BookingService\Resources\icon.ico">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -38,45 +38,52 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Название:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Шаблон:" Style="{DynamicResource FormLabelText}"/>
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <ComboBox Width="300" ItemsSource="{Binding Templates}" SelectedItem="{Binding SelectedTemplate}" DisplayMemberPath="Name" />
+                    <Button Content="Загрузить шаблон" Command="{Binding LoadTemplateCommand}" Style="{DynamicResource SecondaryButton}" Margin="8,0,0,0"/>
+                </StackPanel>
 
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Краткое описание:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ShortDescription, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Название:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Полное описание:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding FullDescription, UpdateSourceTrigger=PropertyChanged}" 
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Краткое описание:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ShortDescription, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Полное описание:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding FullDescription, UpdateSourceTrigger=PropertyChanged}" 
                          Style="{DynamicResource {x:Type TextBox}}"
                          AcceptsReturn="True" TextWrapping="Wrap" Height="100" VerticalScrollBarVisibility="Auto" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Категория:" Style="{DynamicResource FormLabelText}"/>
-                <ComboBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding Categories}" SelectedItem="{Binding Category}" Style="{DynamicResource {x:Type ComboBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Категория:" Style="{DynamicResource FormLabelText}"/>
+                <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Categories}" SelectedItem="{Binding Category}" Style="{DynamicResource {x:Type ComboBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Рейтинг:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Rating, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Рейтинг:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Rating, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="5" Grid.Column="0" Text="Цена:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Цена:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="6" Grid.Column="0" Text="Количество кроватей:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding NumberOfBeds, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="Количество кроватей:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding NumberOfBeds, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="7" Grid.Column="0" Text="Звёзды:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Stars, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="Звёзды:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Stars, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="8" Grid.Column="0" Text="Удобства:" Style="{DynamicResource FormLabelText}"/>
-                <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Amenities, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="9" Grid.Column="0" Text="Удобства:" Style="{DynamicResource FormLabelText}"/>
+                <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Amenities, UpdateSourceTrigger=PropertyChanged}" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="9" Grid.Column="0" Text="Балкон:" Style="{DynamicResource FormLabelText}"/>
-                <CheckBox Grid.Row="9" Grid.Column="1" IsChecked="{Binding HasBalcony}" Style="{DynamicResource {x:Type CheckBox}}" VerticalAlignment="Center" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="10" Grid.Column="0" Text="Балкон:" Style="{DynamicResource FormLabelText}"/>
+                <CheckBox Grid.Row="10" Grid.Column="1" IsChecked="{Binding HasBalcony}" Style="{DynamicResource {x:Type CheckBox}}" VerticalAlignment="Center" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="10" Grid.Column="0" Text="Не для курящих:" Style="{DynamicResource FormLabelText}"/>
-                <CheckBox Grid.Row="10" Grid.Column="1" IsChecked="{Binding IsNonSmoking}" Style="{DynamicResource {x:Type CheckBox}}" VerticalAlignment="Center" Margin="0,2,0,12"/>
+                <TextBlock Grid.Row="11" Grid.Column="0" Text="Не для курящих:" Style="{DynamicResource FormLabelText}"/>
+                <CheckBox Grid.Row="11" Grid.Column="1" IsChecked="{Binding IsNonSmoking}" Style="{DynamicResource {x:Type CheckBox}}" VerticalAlignment="Center" Margin="0,2,0,12"/>
 
-                <TextBlock Grid.Row="11" Grid.Column="0" Text="Изображение:" Style="{DynamicResource FormLabelText}"/>
-                <Grid Grid.Row="11" Grid.Column="1" Margin="0,2,0,12">
+                <TextBlock Grid.Row="12" Grid.Column="0" Text="Изображение:" Style="{DynamicResource FormLabelText}"/>
+                <Grid Grid.Row="12" Grid.Column="1" Margin="0,2,0,12">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>

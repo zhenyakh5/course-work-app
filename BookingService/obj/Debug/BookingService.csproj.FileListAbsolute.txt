@@ -153,3 +153,4 @@ D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\RoomWind
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\RoomWindow.g.cs
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\BookingsAdmin.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\BookingsAdmin.g.cs
+D:\5sem\course-work\course-work-app\BookingService\obj\Debug\GeneratedInternalTypeHelper.g.cs
