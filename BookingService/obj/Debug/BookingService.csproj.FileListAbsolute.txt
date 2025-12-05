@@ -123,8 +123,6 @@ D:\5sem\course-work\course-work-app\BookingService\obj\Debug\BookingService.cspr
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\AddRoom.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\DeleteRoom.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\EditRoom.baml
-D:\5sem\course-work\course-work-app\BookingService\obj\Debug\Resources\Languages\Lang_ru-RU.baml
-D:\5sem\course-work\course-work-app\BookingService\obj\Debug\Resources\Themes\LightTheme.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\Styles.baml
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\AddRoom.g.cs
 D:\5sem\course-work\course-work-app\BookingService\obj\Debug\MVVM\Views\AdminPanel.g.cs

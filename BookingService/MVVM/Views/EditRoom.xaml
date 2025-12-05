@@ -4,13 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Редактировать номер" 
+        Title="BookingService - Редактирование номера" 
         Height="760" 
         Width="850"
         MinWidth="700"
         MinHeight="600"
         Background="{DynamicResource BackgroundBrush}"
-        Cursor="{StaticResource NormalCursor}"
         WindowStartupLocation="CenterScreen"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 
@@ -25,12 +24,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Search Section -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
             <TextBox x:Name="SearchTextBox" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
                      Width="360" 
                      Style="{DynamicResource {x:Type TextBox}}" Margin="0,0,10,0"/>
-            <!-- Search Popup -->
             <Popup x:Name="SearchPopup" 
                PlacementTarget="{Binding ElementName=SearchTextBox}" 
                StaysOpen="False" 
@@ -51,7 +48,6 @@
             </Popup>
         </StackPanel>
 
-        <!-- Edit Form -->
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" 
                       Visibility="{Binding IsFormVisible, Converter={StaticResource BooleanToVisibilityConverter}}"
                       Background="{DynamicResource BackgroundBrush}">

@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingService"
         mc:Ignorable="d"
-        Title="{DynamicResource MainWindowTitle}"
+        Title="BookingService - Главная"
         Width="1440"
         Height="1024"
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}"
-        Cursor="{StaticResource NormalCursor}"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 
     <Grid>
@@ -68,7 +67,6 @@
             </StackPanel>
         </Grid>
 
-        <!-- Rooms list -->
         <ScrollViewer Grid.Row="1" Margin="16" HorizontalScrollBarVisibility="Disabled" Background="{DynamicResource BackgroundBrush}">
             <ItemsControl ItemsSource="{Binding Rooms}">
                 <ItemsControl.ItemsPanel>
@@ -86,12 +84,10 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <!-- Image -->
                                 <Border Grid.Column="0" CornerRadius="6" Background="#FFF" Margin="0" Height="160" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
                                     <Image Source="{Binding ImagePath}" Stretch="UniformToFill" Width="200" Height="160"/>
                                 </Border>
 
-                                <!-- Details -->
                                 <Grid Grid.Column="1" Margin="12,6,6,6">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
@@ -100,20 +96,18 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <!-- Name and price: use Grid for left/right layout -->
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center"/>
-                                        <!-- Price badge aligned right -->
+
                                         <Border Grid.Column="1" Background="{DynamicResource AccentBrush}" CornerRadius="6" Padding="8,4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8,0,0,0">
                                             <TextBlock Text="{Binding Price, StringFormat=' {0:C} / ночь'}" Foreground="{DynamicResource WhiteBrush}" FontWeight="SemiBold"/>
                                         </Border>
                                     </Grid>
 
-                                    <!-- Short description: placed in its own row to avoid overlapping -->
                                     <TextBlock Grid.Row="1" Text="{Binding ShortDescription}" FontSize="13" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" />
 
                                     <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,8,0,0">
@@ -138,7 +132,6 @@
                                         <TextBlock Text="{Binding Amenities}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="Wrap"/>
                                     </StackPanel>
 
-                                    <!-- Actions row -->
                                     <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
                                         <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Margin="0,0,8,0"/>
                                         <Button Content="Подробнее" Style="{DynamicResource SecondaryButton}" Click="ShowRoom_Click" Tag="{Binding Id}"/>

@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingService.MVVM.Views"
         mc:Ignorable="d"
-        Title="Регистрация" 
+        Title="BookingService - Регистрация" 
         Height="562" 
         Width="420" 
         Background="{DynamicResource BackgroundBrush}"
-        Cursor="{StaticResource NormalCursor}"
         WindowStartupLocation="CenterScreen"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 

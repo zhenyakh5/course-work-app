@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingService"
         mc:Ignorable="d"
-        Title="Личный кабинет" 
+        Title="BookingService - Личный кабинет" 
         Height="600" 
         Width="960"
         WindowStartupLocation="CenterScreen"
@@ -18,11 +18,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- Left: account settings -->
         <StackPanel Grid.Column="0">
-            <Label Content="{DynamicResource ProfileHeader}" Style="{DynamicResource HeaderLabel}" HorizontalContentAlignment="Center"/>
+            <Label Content="Профиль" Style="{DynamicResource HeaderLabel}" HorizontalContentAlignment="Center"/>
 
-            <TextBlock Text="{DynamicResource UsernameLabel}" Style="{DynamicResource FormLabelText}"/>
+            <TextBlock Text="Логин" Style="{DynamicResource FormLabelText}"/>
             <TextBox x:Name="UsernameTextBox" Style="{DynamicResource {x:Type TextBox}}" Margin="0,2,0,12" Width="280"/>
 
             <TextBlock Text="Текущий пароль" Style="{DynamicResource FormLabelText}"/>
@@ -35,7 +34,7 @@
             <PasswordBox x:Name="ConfirmPasswordBox" Margin="0,2,0,12" Width="280"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,8,0,0">
-                <Button Content="{DynamicResource SaveButton}" Style="{DynamicResource PrimaryButton}" FontSize="14" Width="120" Click="SaveAccount_Click"/>
+                <Button Content="Сохранить" Style="{DynamicResource PrimaryButton}" FontSize="14" Width="120" Click="SaveAccount_Click"/>
             </StackPanel>
         </StackPanel>
 

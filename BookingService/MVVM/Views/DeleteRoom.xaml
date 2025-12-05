@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Удалить номер" 
+        Title="BookingService - Удаление номера" 
         Height="450" 
         Width="800"
         Background="{DynamicResource BackgroundBrush}"
-        Cursor="{StaticResource NormalCursor}"
         WindowStartupLocation="CenterScreen"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 
@@ -24,12 +23,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Search Section -->
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
             <TextBox x:Name="SearchTextBox" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
                      Width="360" 
                      Style="{DynamicResource {x:Type TextBox}}" Margin="0,0,10,0"/>
-            <!-- Search Popup -->
             <Popup x:Name="SearchPopup" 
        PlacementTarget="{Binding ElementName=SearchTextBox}" 
        StaysOpen="False" 
@@ -50,7 +47,6 @@
             </Popup>
         </StackPanel>
 
-        <!-- Selected Room Info -->
         <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Padding="12" 
                 Visibility="{Binding IsRoomSelected, Converter={StaticResource BooleanToVisibilityConverter}}"
                 Margin="0,0,0,15">
@@ -63,7 +59,6 @@
             </StackPanel>
         </Border>
 
-        <!-- Buttons -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
             <Button Content="Удалить" 
                     Style="{DynamicResource DeleteButton}" 

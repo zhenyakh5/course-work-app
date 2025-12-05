@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingService"
         mc:Ignorable="d"
-        Title="Вход" 
+        Title="BookingService - Авторизация" 
         Height="500" 
         Width="400"
         Background="{DynamicResource BackgroundBrush}"

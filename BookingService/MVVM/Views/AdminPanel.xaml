@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingService.MVVM.Views"
         mc:Ignorable="d"
-        Title="{DynamicResource AdminPanelTitle}" 
+        Title="BookingService - Панель администратора" 
         Height="450" 
         Width="400"
         Background="{DynamicResource BackgroundBrush}"
@@ -16,15 +16,15 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <Label Content="Управление номерами" Style="{DynamicResource HeaderLabel}" HorizontalContentAlignment="Center"/>
 
-            <Button Content="{DynamicResource AddRoomButton}" 
+            <Button Content="Добавить номер" 
                     Command="{Binding AddRoomCommand}"
                     Style="{DynamicResource PrimaryButton}" 
                     Margin="0,12" Width="240"/>
-            <Button Content="{DynamicResource EditRoomButton}" 
+            <Button Content="Отредактировать номер" 
                     Command="{Binding EditRoomCommand}"
                     Style="{DynamicResource PrimaryButton}" 
                     Margin="0,12" Width="240"/>
-            <Button Content="{DynamicResource DeleteRoomButton}" 
+            <Button Content="Удалить номер" 
                     Command="{Binding DeleteRoomCommand}"
                     Style="{DynamicResource DeleteButton}" 
                     Margin="0,12" Width="240"/>

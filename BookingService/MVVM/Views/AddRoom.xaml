@@ -4,14 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Добавить номер" 
+        Title="BookingService - Добавить номер" 
         Height="700" 
         Width="850"
         MinWidth="700"
         MinHeight="600"
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}"
-        Cursor="{StaticResource NormalCursor}"
         Icon="D:\4sem\oop\BookingService\Resources\icon.ico">
 
     <Grid Margin="20">
