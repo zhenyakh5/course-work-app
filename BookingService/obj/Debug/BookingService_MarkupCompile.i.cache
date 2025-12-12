@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\5sem\course-work\course-work-app\BookingService\App.xaml
-11-1973492018
+11163550753
 
-41-1273209634
+43-1839246656
 251847932817
-MVVM\Views\AddRoom.xaml;MVVM\Views\AdminPanel.xaml;MVVM\Views\BookingsAdmin.xaml;MVVM\Views\DeleteRoom.xaml;MVVM\Views\EditRoom.xaml;MVVM\Views\LoginWindow.xaml;MainWindow.xaml;MVVM\Views\RoomWindow.xaml;ProfileWindow.xaml;MVVM\Views\RegisterWindow.xaml;Styles.xaml;
+MVVM\Views\AddRoom.xaml;MVVM\Views\AdminPanel.xaml;MVVM\Views\BookingsAdmin.xaml;MVVM\Views\DeleteRoom.xaml;MVVM\Views\EditRoom.xaml;MVVM\Views\LoginWindow.xaml;MVVM\Views\MainWindow.xaml;MVVM\Views\RoomWindow.xaml;MVVM\Views\ProfileWindow.xaml;MVVM\Views\RegisterWindow.xaml;Resources\Styles.xaml;
 
-True
+False
 

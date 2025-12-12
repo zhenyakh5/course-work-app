@@ -1,0 +1,20 @@
+﻿using System.Windows;
+using BookingService.MVVM.ViewModels;
+
+namespace BookingService
+{
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            var vm = new MainWindowViewModel();
+            DataContext = vm;
+
+            // show admin button according to current session
+            AdminPanelButton.Visibility = (SessionManager.CurrentUser?.IsAdmin == true)
+                ? Visibility.Visible
+                : Visibility.Collapsed;
+        }
+    }
+}

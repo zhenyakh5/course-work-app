@@ -71,7 +71,6 @@ namespace BookingService.ViewModels
             CancelCommand = new RelayCommand(Cancel);
             LoadTemplateCommand = new RelayCommand(LoadTemplate, CanLoadTemplate);
 
-            // load templates asynchronously
             _ = LoadTemplatesAsync();
         }
 
@@ -83,9 +82,7 @@ namespace BookingService.ViewModels
                 Templates = new ObservableCollection<HotelRoom>(rooms);
             }
             catch
-            {
-                // ignore
-            }
+            { }
         }
 
         private void BrowseImage(object parameter)
@@ -211,7 +208,6 @@ namespace BookingService.ViewModels
         {
             if (SelectedTemplate == null) return;
 
-            // copy fields from selected template into form for editing
             Name = SelectedTemplate.Name + " (копия)";
             ShortDescription = SelectedTemplate.ShortDescription;
             FullDescription = SelectedTemplate.FullDescription;

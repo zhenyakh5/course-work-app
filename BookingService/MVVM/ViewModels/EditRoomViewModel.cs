@@ -138,7 +138,6 @@ namespace BookingService.ViewModels
             IsFormVisible = true;
             IsSearchPopupOpen = false;
 
-            // Notify property changes
             OnPropertyChanged(nameof(Name));
             OnPropertyChanged(nameof(ShortDescription));
             OnPropertyChanged(nameof(FullDescription));

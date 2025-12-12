@@ -22,7 +22,7 @@ namespace BookingService.MVVM.ViewModels
             LoadBookings();
             ConfirmCommand = new RelayCommand(ConfirmBooking);
             CancelCommand = new RelayCommand(CancelBooking);
-            CloseCommand = closeCommand ?? new RelayCommand(o => { /* handled by window binding if needed */ });
+            CloseCommand = closeCommand ?? new RelayCommand(o => {});
         }
 
         public void LoadBookings()

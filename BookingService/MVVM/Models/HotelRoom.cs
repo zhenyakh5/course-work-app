@@ -20,7 +20,6 @@ namespace BookingService.MVVM.Models
         public int Stars { get; set; }
         public bool HasBalcony { get; set; }
         public bool IsNonSmoking { get; set; }
-        // Keep IsAvailable for compatibility; actual availability is computed from bookings
         public bool IsAvailable { get; set; } = true;
     }
 }

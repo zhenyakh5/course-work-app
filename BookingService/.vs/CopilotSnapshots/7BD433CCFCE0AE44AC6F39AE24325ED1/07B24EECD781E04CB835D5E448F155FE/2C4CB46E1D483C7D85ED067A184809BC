@@ -1,0 +1,41 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using BookingService.MVVM.ViewModels;
+
+namespace BookingService.MVVM.Views
+{
+    public partial class ProfileWindow : Window
+    {
+        private readonly ProfileViewModel _vm;
+
+        public ProfileWindow()
+        {
+            InitializeComponent();
+            _vm = new ProfileViewModel();
+            DataContext = _vm;
+        }
+
+        // Forward PasswordBox content to ViewModel (PasswordBox cannot be bound securely)
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            var current = (this.FindName("CurrentPasswordBox") as PasswordBox)?.Password;
+            var nw = (this.FindName("NewPasswordBox") as PasswordBox)?.Password;
+            var confirm = (this.FindName("ConfirmPasswordBox") as PasswordBox)?.Password;
+            _vm.SetPasswords(current, nw, confirm);
+        }
+
+        // Delegate booking card click to ViewModel command (OpenRoomCommand)
+        private void BookingCard_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is FrameworkElement fe && fe.Tag != null)
+            {
+                if (int.TryParse(fe.Tag.ToString(), out var roomId))
+                {
+                    if (_vm.OpenRoomCommand?.CanExecute(roomId) == true)
+                        _vm.OpenRoomCommand.Execute(roomId);
+                }
+            }
+        }
+    }
+}

@@ -31,7 +31,7 @@ namespace BookingService.MVVM.ViewModels
 
         public string RoomIsAvailableText => Room != null ? (IsRoomAvailableForDates(Room.Id, CheckInDate, CheckOutDate) ? "Да" : "Нет") : string.Empty;
         public string RoomHasBalconyText => Room != null ? (Room.HasBalcony ? "Да" : "Нет") : string.Empty;
-        public string RoomIsNonSmokingText => Room != null ? (!Room.IsNonSmoking ? "Да" : "Нет") : string.Empty; // note: display 'Да' if smoking allowed
+        public string RoomIsNonSmokingText => Room != null ? (!Room.IsNonSmoking ? "Да" : "Нет") : string.Empty;
 
         private DateTime _checkInDate = DateTime.Now.Date;
         private DateTime _checkOutDate = DateTime.Now.Date.AddDays(1);
@@ -117,7 +117,6 @@ namespace BookingService.MVVM.ViewModels
         {
             try
             {
-                // find a confirmed booking that overlaps requested range
                 var booking = _context.Bookings
                     .Where(b => b.RoomId == roomId && b.Status == "Подтверждено" && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut))
                     .OrderBy(b => b.CheckInDate)
@@ -135,7 +134,6 @@ namespace BookingService.MVVM.ViewModels
         {
             try
             {
-                // consider confirmed bookings overlapping the requested range
                 var overlapping = _context.Bookings.Where(b => b.RoomId == roomId && b.Status == "Подтверждено" && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut)).Any();
                 return !overlapping;
             }
@@ -164,7 +162,6 @@ namespace BookingService.MVVM.ViewModels
                 return;
             }
 
-            // check availability for selected dates
             if (!IsRoomAvailableForDates(Room.Id, CheckInDate, CheckOutDate))
             {
                 MessageBox.Show("Номер недоступен на выбранные даты.", "Недоступно", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -198,7 +195,6 @@ namespace BookingService.MVVM.ViewModels
 
                 MessageBox.Show("Бронь создана и отправлена на подтверждение.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateAvailabilityInfo();
-                //CommandManager.InvalidateRequerySuggested();
                 _navigationService.CloseWindow();
                 
             }
