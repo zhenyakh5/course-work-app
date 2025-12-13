@@ -9,8 +9,9 @@
         Title="BookingService - Детали номера" 
         Height="600"
         Width="900"
+        Background="{DynamicResource BackgroundBrush}"
         WindowStartupLocation="CenterScreen"
-        Background="{DynamicResource BackgroundBrush}">
+        Icon="D:\5sem\course-work\course-work-app\BookingService\Resources\icon.ico">
     <Window.Resources>
         <conv:StringToVisibilityConverter x:Key="StrToVis" />
     </Window.Resources>
@@ -55,7 +56,6 @@
                     <Button Content="Забронировать" Style="{DynamicResource PrimaryButton}" Width="140" Margin="12,18,0,0" Command="{Binding BookCommand}" IsEnabled="{Binding IsBookable}"/>
                 </StackPanel>
 
-                <!-- Overlapping booking message -->
                 <TextBlock Text="{Binding OverlappingBookingMessage}" Margin="0,8,0,0" Foreground="#D9534F" Visibility="{Binding OverlappingBookingMessage, Converter={StaticResource StrToVis}}" />
 
             </StackPanel>

@@ -29,6 +29,30 @@ namespace BookingService.MVVM.ViewModels
             }
         }
 
+        private DateTime _checkInDate = DateTime.Now.Date;
+        public DateTime CheckInDate
+        {
+            get => _checkInDate;
+            set
+            {
+                _checkInDate = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private DateTime _checkOutDate = DateTime.Now.Date.AddDays(1);
+        public DateTime CheckOutDate
+        {
+            get => _checkOutDate;
+            set
+            {
+                _checkOutDate = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool _onlyAvailable = false;
+
         public ICommand ProfileCommand { get; }
         public ICommand AdminPanelCommand { get; }
         public ICommand AlphabetSortCommand { get; }
@@ -36,6 +60,8 @@ namespace BookingService.MVVM.ViewModels
         public ICommand CostDescSortCommand { get; }
         public ICommand RefreshCommand { get; }
         public ICommand OpenRoomCommand { get; }
+        public ICommand ApplyFilterCommand { get; }
+        public ICommand ClearFilterCommand { get; }
 
         public MainWindowViewModel()
         {
@@ -46,6 +72,9 @@ namespace BookingService.MVVM.ViewModels
             CostDescSortCommand = new RelayCommand(_ => SortCostDesc());
             RefreshCommand = new RelayCommand(_ => LoadRooms());
             OpenRoomCommand = new RelayCommand(OpenRoom);
+
+            ApplyFilterCommand = new RelayCommand(_ => ApplyFilter());
+            ClearFilterCommand = new RelayCommand(_ => ClearFilter());
 
             _context.DataChanged += () => System.Windows.Application.Current.Dispatcher.Invoke(LoadRooms);
             LoadRooms();
@@ -77,6 +106,19 @@ namespace BookingService.MVVM.ViewModels
             var filteredRooms = string.IsNullOrEmpty(filter)
                 ? _originalRooms
                 : _originalRooms.Where(r => r.Name != null && r.Name.ToLower().Contains(filter));
+
+            if (_onlyAvailable)
+            {
+                var checkIn = CheckInDate.Date;
+                var checkOut = CheckOutDate.Date;
+                if (checkOut <= checkIn)
+                {
+                    UpdateRoomsCollection(filteredRooms);
+                    return;
+                }
+
+                filteredRooms = filteredRooms.Where(r => IsRoomAvailableForDates(r.Id, checkIn, checkOut));
+            }
 
             UpdateRoomsCollection(filteredRooms);
         }
@@ -118,6 +160,41 @@ namespace BookingService.MVVM.ViewModels
                 wnd.DataContext = vm;
                 wnd.Show();
             }
+        }
+
+        private bool IsRoomAvailableForDates(int roomId, DateTime checkIn, DateTime checkOut)
+        {
+            try
+            {
+                var overlapping = _context.Bookings.Where(b => b.RoomId == roomId && (b.Status == "Подтверждено" || b.Status == "Ожидание") && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut)).Any();
+                return !overlapping;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void ApplyFilter()
+        {
+            if (CheckOutDate.Date <= CheckInDate.Date)
+            {
+                MessageBox.Show("Дата выезда должна быть позже даты заезда.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            _onlyAvailable = true;
+            RefreshData();
+        }
+
+        private void ClearFilter()
+        {
+            _onlyAvailable = false;
+            CheckInDate = DateTime.Now.Date;
+            CheckOutDate = DateTime.Now.Date.AddDays(1);
+            OnPropertyChanged(nameof(CheckInDate));
+            OnPropertyChanged(nameof(CheckOutDate));
+            RefreshData();
         }
     }
 }

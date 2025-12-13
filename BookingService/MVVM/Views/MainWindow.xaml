@@ -22,7 +22,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Header -->
         <Grid Grid.Row="0" Background="{DynamicResource AccentBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -70,80 +69,104 @@
             </StackPanel>
         </Grid>
 
-        <ScrollViewer Grid.Row="1" Margin="16" HorizontalScrollBarVisibility="Disabled" Background="{DynamicResource BackgroundBrush}">
-            <ItemsControl ItemsSource="{Binding Rooms}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" ItemHeight="Auto" ItemWidth="Auto"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
+        <Grid Grid.Row="1" Margin="16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="320"/>
+            </Grid.ColumnDefinitions>
 
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border Style="{DynamicResource RoomCardStyle}" Margin="12">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="220"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Disabled" Background="{DynamicResource BackgroundBrush}">
+                <ItemsControl ItemsSource="{Binding Rooms}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" ItemHeight="Auto" ItemWidth="Auto"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
 
-                                <Border Grid.Column="0" CornerRadius="6" Background="#FFF" Margin="0" Height="160" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Image Source="{Binding ImagePath}" Stretch="UniformToFill" Width="200" Height="160"/>
-                                </Border>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{DynamicResource RoomCardStyle}" Margin="12">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="220"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <Grid Grid.Column="1" Margin="12,6,6,6">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+                                    <Border Grid.Column="0" CornerRadius="6" Background="#FFF" Margin="0" Height="160" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image Source="{Binding ImagePath}" Stretch="UniformToFill" Width="200" Height="160"/>
+                                    </Border>
 
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                        </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center"/>
+                                    <Grid Grid.Column="1" Margin="12,6,6,6">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
 
-                                        <Border Grid.Column="1" Background="{DynamicResource AccentBrush}" CornerRadius="6" Padding="8,4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8,0,0,0">
-                                            <TextBlock Text="{Binding Price, StringFormat=' {0:C} / ночь'}" Foreground="{DynamicResource WhiteBrush}" FontWeight="SemiBold"/>
-                                        </Border>
-                                    </Grid>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center"/>
 
-                                    <TextBlock Grid.Row="1" Text="{Binding ShortDescription}" FontSize="13" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" />
+                                            <Border Grid.Column="1" Background="{DynamicResource AccentBrush}" CornerRadius="6" Padding="8,4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="8,0,0,0">
+                                                <TextBlock Text="{Binding Price, StringFormat=' {0:C} / ночь'}" Foreground="{DynamicResource WhiteBrush}" FontWeight="SemiBold"/>
+                                            </Border>
+                                        </Grid>
 
-                                    <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,8,0,0">
-                                        <TextBlock Text="{Binding FullDescription}" FontSize="13" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextBrush}" MaxWidth="600" Margin="0,0,5,0"/>
+                                        <TextBlock Grid.Row="1" Text="{Binding ShortDescription}" FontSize="13" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,6,0,0" />
 
-                                        <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
-                                            <TextBlock Text="Категория: " FontWeight="Bold" FontSize="12"/>
-                                            <TextBlock Text="{Binding Category}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+                                        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,8,0,0">
+                                            <TextBlock Text="{Binding FullDescription}" FontSize="13" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextBrush}" MaxWidth="600" Margin="0,0,5,0"/>
 
-                                            <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
+                                            <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                                <TextBlock Text="Категория: " FontWeight="Bold" FontSize="12"/>
+                                                <TextBlock Text="{Binding Category}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
 
-                                            <TextBlock Text="Кроватей: " FontWeight="Bold" FontSize="12"/>
-                                            <TextBlock Text="{Binding NumberOfBeds}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+                                                <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
 
-                                            <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
+                                                <TextBlock Text="Кроватей: " FontWeight="Bold" FontSize="12"/>
+                                                <TextBlock Text="{Binding NumberOfBeds}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
 
-                                            <TextBlock Text="Звёзды: " FontWeight="Bold" FontSize="12"/>
-                                            <TextBlock Text="{Binding Stars}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+                                                <TextBlock Text="   |   " FontSize="12" Foreground="{DynamicResource MutedTextBrush}" Margin="8,0,8,0"/>
+
+                                                <TextBlock Text="Звёзды: " FontWeight="Bold" FontSize="12"/>
+                                                <TextBlock Text="{Binding Stars}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}"/>
+                                            </StackPanel>
+
+                                            <TextBlock Text="Удобства:" FontWeight="Bold" Margin="0,8,0,0"/>
+                                            <TextBlock Text="{Binding Amenities}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="Wrap"/>
                                         </StackPanel>
 
-                                        <TextBlock Text="Удобства:" FontWeight="Bold" Margin="0,8,0,0"/>
-                                        <TextBlock Text="{Binding Amenities}" FontSize="12" Foreground="{DynamicResource MutedTextBrush}" TextWrapping="Wrap"/>
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
-                                        <Button Content="Подробнее" Style="{DynamicResource SecondaryButton}" Command="{Binding DataContext.OpenRoomCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding Id}"/>
-                                    </StackPanel>
+                                        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+                                            <Button Content="Подробнее" Style="{DynamicResource SecondaryButton}" Command="{Binding DataContext.OpenRoomCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding Id}"/>
+                                        </StackPanel>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+            <Border Grid.Column="1" Background="{DynamicResource CardBackgroundBrush}" CornerRadius="8" Padding="12" Margin="12">
+                <StackPanel>
+                    <TextBlock Text="Фильтр по доступности" FontSize="16" FontWeight="Bold" Margin="0,0,0,8"/>
+
+                    <TextBlock Text="Дата заезда" FontWeight="SemiBold"/>
+                    <DatePicker SelectedDate="{Binding CheckInDate, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <TextBlock Text="Дата выезда" FontWeight="SemiBold" Margin="0,8,0,0"/>
+                    <DatePicker SelectedDate="{Binding CheckOutDate, UpdateSourceTrigger=PropertyChanged}" />
+
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0,12,0,0">
+                        <Button Content="Применить" Style="{DynamicResource SecondaryButton}" Command="{Binding ApplyFilterCommand}"/>
+                        <Button Content="Сбросить" Style="{DynamicResource SecondaryButton}" Command="{Binding ClearFilterCommand}" Margin="0,12,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Window>

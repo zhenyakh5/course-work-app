@@ -118,7 +118,7 @@ namespace BookingService.MVVM.ViewModels
             try
             {
                 var booking = _context.Bookings
-                    .Where(b => b.RoomId == roomId && b.Status == "Подтверждено" && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut))
+                    .Where(b => b.RoomId == roomId && (b.Status == "Подтверждено" || b.Status == "Ожидание") && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut))
                     .OrderBy(b => b.CheckInDate)
                     .FirstOrDefault();
 
@@ -134,7 +134,7 @@ namespace BookingService.MVVM.ViewModels
         {
             try
             {
-                var overlapping = _context.Bookings.Where(b => b.RoomId == roomId && b.Status == "Подтверждено" && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut)).Any();
+                var overlapping = _context.Bookings.Where(b => b.RoomId == roomId && (b.Status == "Подтверждено" || b.Status == "Ожидание") && !(b.CheckOutDate <= checkIn || b.CheckInDate >= checkOut)).Any();
                 return !overlapping;
             }
             catch
@@ -195,7 +195,16 @@ namespace BookingService.MVVM.ViewModels
 
                 MessageBox.Show("Бронь создана и отправлена на подтверждение.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                 UpdateAvailabilityInfo();
-                _navigationService.CloseWindow();
+
+                if (_navigationService != null)
+                {
+                    _navigationService.CloseWindow();
+                }
+                else
+                {
+                    var activeWindow = Application.Current?.Windows.OfType<Window>().FirstOrDefault(w => w.IsActive);
+                    activeWindow?.Close();
+                }
                 
             }
             catch (Exception ex)

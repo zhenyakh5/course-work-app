@@ -132,7 +132,6 @@
             </Grid>
         </ScrollViewer>
 
-        <!-- Buttons -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
             <Button Content="Сохранить" 
                     Style="{DynamicResource PrimaryButton}" 
